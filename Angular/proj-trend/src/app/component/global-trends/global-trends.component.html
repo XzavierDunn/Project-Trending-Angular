@@ -1,0 +1,16 @@
+<p>
+  global-trends works!
+</p>
+
+
+<div *ngFor='let tweet of trends'>
+    <h4>
+      Name: {{ tweet.name }}
+    </h4>
+    <h4>
+      Tweet Count: {{ tweet.tweets }}
+    </h4>
+    <h4>
+      <a target="blank" href="{{ tweet.url }}">Url</a>
+    </h4>
+</div>
