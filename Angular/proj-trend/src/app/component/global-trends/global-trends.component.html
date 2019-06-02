@@ -1,16 +1,19 @@
-<p>
-  global-trends works!
-</p>
 
+<h1>Global Trending Topics</h1>
 
 <div *ngFor='let tweet of trends'>
-    <h4>
+
+  <mat-list>
+    <mat-list-item>
       Name: {{ tweet.name }}
-    </h4>
-    <h4>
+    </mat-list-item>
+    <mat-list-item>
       Tweet Count: {{ tweet.tweets }}
-    </h4>
-    <h4>
+    </mat-list-item>
+    <mat-list-item>
       <a target="blank" href="{{ tweet.url }}">Url</a>
-    </h4>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
+
 </div>

@@ -7,15 +7,34 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GlobalTrendsComponent } from '../app/component/global-trends/global-trends.component';
 import { GlobalTrendsService } from './services/global-trends.service';
+import { LocationTrendsComponent } from './component/location-trends/location-trends.component';
+
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material';
+
 
 const appRoutes: Routes = [
   { path: 'glob', component: GlobalTrendsComponent },
+  { path: 'location', component: LocationTrendsComponent },
+  { path: '**', component: GlobalTrendsComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    GlobalTrendsComponent
+    GlobalTrendsComponent,
+    LocationTrendsComponent
   ],
   imports: [
     HttpClientModule,
@@ -24,7 +43,19 @@ const appRoutes: Routes = [
       { enableTracing: true }
     ),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatListModule,
+    MatMenuModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatSnackBarModule,
+    MatFormFieldModule,
+    MatSelectModule,
   ],
   providers: [
     GlobalTrendsService,
