@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ErrorHandler } from '@angular/core';
 import { GlobalTrendsService } from '../../services/global-trends.service';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar, MatTableDataSource, PageEvent } from '@angular/material';
 
 
 @Component({
@@ -10,6 +10,8 @@ import { MatSnackBar } from '@angular/material';
 })
 
 export class GlobalTrendsComponent implements OnInit {
+  dataSource:MatTableDataSource<object>;
+
 
   trends: any;
 
@@ -17,7 +19,7 @@ export class GlobalTrendsComponent implements OnInit {
   }
 
   ngOnInit() {
-    const snackbarRef = this.snackbar.open('Grabbing Tweets...', 'Ok');
+    const snackbarRef = this.snackbar.open('Grabbing Tweets...');
     this._globalService.getGlobalTrending().subscribe((val: any) => {
       this.trends = val;
       console.log( 'Data was returned' );
