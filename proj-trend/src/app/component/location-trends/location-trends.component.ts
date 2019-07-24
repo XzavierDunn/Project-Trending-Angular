@@ -32,7 +32,7 @@ export class LocationTrendsComponent implements OnInit {
   }
 
   onSubmit() {
-    const snackbarRef = this.snackbar.open('Grabbing Tweets...', 'Ok');
+    const snackbarRef = this.snackbar.open('Grabbing Tweets...');
     console.log(this.loc.value)
     this._globalService.getLocalTrending(this.loc.value).subscribe((val: any) => {
       this.tweets = val;

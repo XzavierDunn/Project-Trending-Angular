@@ -9,6 +9,13 @@
                 <span class="spacer"></span>
             </mat-toolbar-row>
         </mat-toolbar>
-        <router-outlet></router-outlet>
+        <mat-tab-group>
+            <mat-tab label="Global Trends">
+                <router-outlet></router-outlet>
+            </mat-tab>
+            <mat-tab label="Location Based Trends">
+                <app-location-trends></app-location-trends>
+            </mat-tab>
+        </mat-tab-group>
     </div>
 </mat-drawer-container>

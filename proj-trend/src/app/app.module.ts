@@ -22,6 +22,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
 
 
 const appRoutes: Routes = [
@@ -56,6 +59,8 @@ const appRoutes: Routes = [
     MatSnackBarModule,
     MatFormFieldModule,
     MatSelectModule,
+    MatTabsModule,
+    MatPaginatorModule,
   ],
   providers: [
     GlobalTrendsService,
