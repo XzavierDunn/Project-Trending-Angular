@@ -1,10 +1,10 @@
-
-<div class="location">
-  <form class="locInput" (ngSubmit)="onSubmit()" [formGroup]="loc">
-    <input placeholder="text.." name="loc" formControlName="content" cols="25" rows="1">
+  
+<form class="form" (ngSubmit)="onSubmit()" [formGroup]="loc">
+  <div class="innerForm">
+    <input matInput formControlName="content" placeholder="Location">
     <button mat-raised-button class="myButt" color="primary" type="submit">Search</button>
-  </form>
-</div>
+  </div>
+</form>
 
 
 <hr>
