@@ -1,7 +1,7 @@
+<div class="center" style="margin-left: 10px;">
+  <h1>Global Trending Topics</h1>
 
-<h1>Global Trending Topics</h1>
-
-<div *ngIf="trends;else other_content">
+  <div *ngIf="trends;else other_content">
 
 
     <div *ngFor='let tweet of trends'>
@@ -18,12 +18,9 @@
         <mat-divider></mat-divider>
       </mat-list>
     </div>
-    <mat-paginator
-      [length]="length"
-      [pageSize]="pageSize"
-      [pageSizeOptions]="pageSizeOptions"
-      (page)="onPageChange($event)"
-    ></mat-paginator>
-</div>
+    <mat-paginator [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions"
+      (page)="onPageChange($event)"></mat-paginator>
+  </div>
 
-<ng-template #other_content>No Tweets available...</ng-template>
+  <ng-template #other_content>No Tweets available...</ng-template>
+</div>
