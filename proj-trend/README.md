@@ -1,27 +1,29 @@
-# ProjTrend
+# Project Trending
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0.
+### This is a site where you can see what is trending globally or near you on Twitter.
 
-## Development server
+I'm using Flask as a backend and Angular frontend for this project.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### To get started ...
 
-## Code scaffolding
+Clone this https://github.com/XzavierDunn/Project-Trending and and the frontend https://github.com/XzavierDunn/Project-Trending-Angular. After that you have to install the angular cli and run npm install in the project directory for the frontend. After that stops you can run the app with ng serve -o.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To run the backend just setup these environment variables then start a virtual environment with `python3 -m venv venv` enter it `. venv/bin/activate` on macOS or linux then `pip install -r requirements.txt`.
 
-## Build
+No database required you only need to create an app through https://developer.twitter.com/en/apps and then use all four tokens as environment variables.
+Linux/MacOS:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+export consumer_key='API Key'
+export consumer_secret='API secret key'
+export access_token='Access token'
+export access_token_secret='Access token secret'
 
-## Running unit tests
+python app.py
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Tweepy - http://docs.tweepy.org
+Tweepy Github - https://github.com/tweepy/tweepy
 
-## Running end-to-end tests
+- Xzavier Dunn
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
